@@ -14,4 +14,10 @@ hist(y, col="peachpuff", border="black", prob = TRUE, xlab="temp", main = "Histo
 lines(density(y), col="red", lwd =2)
 curve(dnorm(y, mean = mean(y), sd = sd(y)), col = "darkblue", lwd = 2, add = T, xname = "y")
 detach(mtcars)
+
+variation<-function()
+{
+ v<-(sqrt(sd_x)/mean_x)*100
+ return v
+}
 }
