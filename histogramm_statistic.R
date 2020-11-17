@@ -1,8 +1,9 @@
+
 histogramm_statistic<-function(n,mean_x,sd_x,mean_e,sd_e)
 {
 set.seed(6)
-x< -rnorm(n,mean_x,sd_x)##параметры x
-e< -rnorm(n,mean_e,sd_e)##параметры e
+x<-rnorm(n,mean_x,sd_x)##параметры x
+e<-rnorm(n,mean_e,sd_e)##параметры e
 y<-100-12*x+e
 plot (x,y)
 attach(mtcars)
@@ -15,9 +16,6 @@ lines(density(y), col="red", lwd =2)
 curve(dnorm(y, mean = mean(y), sd = sd(y)), col = "darkblue", lwd = 2, add = T, xname = "y")
 detach(mtcars)
 
-variation<-function()
-{
- v<-(sqrt(sd_x)/mean_x)*100
- return v
-}
+ v<-data.frame((sqrt(sd_x)/mean_x)*100)##коэффициент вариации
+ v
 }
