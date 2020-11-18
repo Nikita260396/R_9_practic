@@ -16,6 +16,7 @@ lines(density(y), col="red", lwd =2)
 curve(dnorm(y, mean = mean(y), sd = sd(y)), col = "darkblue", lwd = 2, add = T, xname = "y")
 detach(mtcars)
 
- v<-data.frame((sqrt(sd_x)/mean_x)*100)##коэффициент вариации
+ v<-data.frame((sqrt(sd_x)/mean_x)*100)##фрейм
+ ## v - фрейм; sqrt(sd_x - отклонение; mean_x - среднее значение.
  v
 }
