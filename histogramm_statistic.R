@@ -1,5 +1,5 @@
 
-histogramm_statistic<-function(n,mean_x,sd_x,mean_e,sd_e)
+histogramm_statistic<-function(n,mean_x,sd_x,mean_e,sd_e)##выводит гистограмму, функцию плотности распределения;выводит фрейм с коэффициентом вариации; параметры: количество наблюдений, средние значения переменных x y и их дисперсии
 {
 set.seed(6)
 x<-rnorm(n,mean_x,sd_x)##параметры x
